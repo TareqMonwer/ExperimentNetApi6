@@ -4,6 +4,7 @@ using ExperimentNetApi6.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExperimentNetApi6.Migrations
 {
     [DbContext(typeof(ExperimentNetApi6Context))]
-    partial class ExperimentNetApi6ContextModelSnapshot : ModelSnapshot
+    [Migration("20240305173008_AddSearchCountToWeather")]
+    partial class AddSearchCountToWeather
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
