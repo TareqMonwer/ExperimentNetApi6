@@ -37,7 +37,6 @@ namespace ExperimentNetApi6.Services
             weather.DateTime = DateTime.UtcNow;
             weather.SearchCount = weather.SearchCount + 1;
             weather.Summary = weatherIn.Summary;
-            _context.Weather.Update(weather);
             _context.SaveChanges();
         }
     }
