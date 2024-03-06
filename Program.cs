@@ -1,16 +1,17 @@
 using ExperimentNetApi6.Data;
+using ExperimentNetApi6.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
+
+// Add services to the container.
+builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// builder.Services.Configure<ExternalMicroServicesConfig>(builder.Configuration.GetSection(nameof(ExternalMicroServicesConfig)));
 
 builder.Services.AddDbContext<ExperimentNetApi6Context>(options =>
 {

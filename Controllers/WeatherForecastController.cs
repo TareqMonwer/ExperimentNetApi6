@@ -1,3 +1,4 @@
+using ExperimentNetApi6.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExperimentNetApi6.Controllers
@@ -12,10 +13,12 @@ namespace ExperimentNetApi6.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IWeatherRepository _weather_service;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherRepository weather_svc)
         {
             _logger = logger;
+            _weather_service = weather_svc;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -28,6 +31,13 @@ namespace ExperimentNetApi6.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpPost]
+        public IActionResult CreateWeatherRecord()
+        {
+            _weather_service.CreateWeather();
+            return Ok("Resource Created");
         }
     }
 }
