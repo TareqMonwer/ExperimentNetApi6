@@ -1,4 +1,5 @@
 ﻿using ExperimentNetApi6.Data;
+using ExperimentNetApi6.Dtos;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerUI;
 

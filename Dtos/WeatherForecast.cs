@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ExperimentNetApi6
+namespace ExperimentNetApi6.Dtos
 {
     public class WeatherForecast
     {
