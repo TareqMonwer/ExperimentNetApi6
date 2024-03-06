@@ -1,3 +1,4 @@
+using ExperimentNetApi6.Data;
 using ExperimentNetApi6.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,10 +35,30 @@ namespace ExperimentNetApi6.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateWeatherRecord()
+        public IActionResult CreateWeatherRecord([FromBody]WeatherForecast weatherForecast)
         {
             _weather_service.CreateWeather();
             return Ok("Resource Created");
+        }
+
+        [HttpGet]
+        [Route("fromDb/")]
+        public ActionResult<ICollection<Weather>> GetAllFromDB()
+        {
+            return Ok(_weather_service.GetAll());
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult<Weather> Update(int id, [FromBody]WeatherForecast weatherIn)
+        {
+            var weather = _weather_service.GetWeatherById(id);
+
+            if (weather != null)
+            {
+                _weather_service.UpdateWeather(id, weather, weatherIn);
+                return NoContent();
+            }
+            return NotFound();
         }
     }
 }
