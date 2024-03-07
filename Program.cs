@@ -47,6 +47,19 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.Map("/usingMap", builder => {
+    builder.Use(async (context, next) =>
+    {
+        await Console.Out.WriteLineAsync("UsingMap: before next");
+        await next.Invoke();
+        await Console.Out.WriteLineAsync("UsingMap: after next");
+    });
+    builder.Run(async context => {
+        await Console.Out.WriteLineAsync("UsingMap from Run method.");
+        await context.Response.WriteAsync("UsingMap Page");
+    });
+});
+
 app.Use(async (context, next) =>
 {
     await Console.Out.WriteLineAsync("Logic before calling next");
