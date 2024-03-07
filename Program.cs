@@ -47,5 +47,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run(async context =>
+{
+    await context.Response.WriteAsync("Hello from middleware component.");
+});
 
+app.Run();
