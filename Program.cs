@@ -47,8 +47,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.Use(async (context, next) =>
+{
+    await Console.Out.WriteLineAsync("Logic before calling next");
+    await next.Invoke();
+    await Console.Out.WriteLineAsync("1st Custom middleware, after next");
+});
 app.Run(async context =>
 {
+    await Console.Out.WriteLineAsync("2nd Custom middleware");
     await context.Response.WriteAsync("Hello from middleware component.");
 });
 
