@@ -1,0 +1,28 @@
+2024-03-08 20:33:07.1198 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-08 20:33:07.1198 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-08 20:33:07.1434 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-08 20:33:07.1589 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\bin\Debug\net6.0\nlog.config
+2024-03-08 20:33:07.1744 Info Configuration initialized.
+2024-03-08 20:33:07.2313 Info Shutdown() called. Logger closing...
+2024-03-08 20:33:07.2313 Info Closing old configuration.
+2024-03-08 20:33:07.2524 Info Logger has been closed down.
+2024-03-08 20:33:07.6307 Info Loading NLog config from XML file: D:\Personal\Projects\c#\ExperimentNetApi6\NLog.config
+2024-03-08 20:33:07.6307 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-08 20:33:07.6307 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-08 20:33:07.6307 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-08 20:33:07.6307 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\NLog.config
+2024-03-08 20:33:07.6307 Info Configuration initialized.
+2024-03-08 20:37:31.3081 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-08 20:37:31.3081 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-08 20:37:31.3331 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-08 20:37:31.3448 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\bin\Debug\net6.0\nlog.config
+2024-03-08 20:37:31.3621 Info Configuration initialized.
+2024-03-08 20:37:31.4059 Info Shutdown() called. Logger closing...
+2024-03-08 20:37:31.4059 Info Closing old configuration.
+2024-03-08 20:37:31.4252 Info Logger has been closed down.
+2024-03-08 20:37:31.5196 Info Loading NLog config from XML file: D:\Personal\Projects\c#\ExperimentNetApi6\NLog.config
+2024-03-08 20:37:31.5196 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-08 20:37:31.5217 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-08 20:37:31.5217 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-08 20:37:31.5217 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\NLog.config
+2024-03-08 20:37:31.5217 Info Configuration initialized.

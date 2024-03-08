@@ -3,8 +3,30 @@ using ExperimentNetApi6.Services;
 using Microsoft.EntityFrameworkCore;
 using ExperimentNetApi6.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
+using NLog;
+using NLog.Web;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+try
+{
+    logger.Debug("init main function");
+}
+catch (Exception ex)
+{
+    logger.Error(ex, "Error in init");
+    throw;
+}
+finally
+{
+    LogManager.Shutdown();
+}
+
+builder.Logging.ClearProviders();
+builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+builder.Host.UseNLog();
 
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
@@ -60,16 +82,16 @@ app.Map("/usingMap", builder => {
     });
 });
 
-app.Use(async (context, next) =>
-{
-    await Console.Out.WriteLineAsync("Logic before calling next");
-    await next.Invoke();
-    await Console.Out.WriteLineAsync("1st Custom middleware, after next");
-});
-app.Run(async context =>
-{
-    await Console.Out.WriteLineAsync("2nd Custom middleware");
-    await context.Response.WriteAsync("Hello from middleware component.");
-});
+//app.Use(async (context, next) =>
+//{
+//    await Console.Out.WriteLineAsync("Logic before calling next");
+//    await next.Invoke();
+//    await Console.Out.WriteLineAsync("1st Custom middleware, after next");
+//});
+//app.Run(async context =>
+//{
+//    await Console.Out.WriteLineAsync("2nd Custom middleware");
+//    await context.Response.WriteAsync("Hello from middleware component.");
+//});
 
 app.Run();

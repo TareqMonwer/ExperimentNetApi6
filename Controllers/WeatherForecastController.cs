@@ -26,6 +26,10 @@ namespace ExperimentNetApi6.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInformation("---Logger: Loginfo");
+            _logger.LogDebug("----Logger: LogDebug");
+            _logger.LogWarning("---Logger: LogWarning");
+            _logger.LogError("---Error: LogError");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

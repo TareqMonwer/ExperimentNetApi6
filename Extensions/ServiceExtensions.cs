@@ -1,4 +1,5 @@
-﻿namespace ExperimentNetApi6.Extensions
+﻿
+namespace ExperimentNetApi6.Extensions
 {
     public static class ServiceExtensions
     {
@@ -17,5 +18,6 @@
         {
             services.Configure<IISOptions>(options => { });
         }
+
     }
 }
