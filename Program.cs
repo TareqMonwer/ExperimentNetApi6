@@ -9,28 +9,35 @@ using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-try
-{
-    logger.Debug("init main function");
-}
-catch (Exception ex)
-{
-    logger.Error(ex, "Error in init");
-    throw;
-}
-finally
-{
-    LogManager.Shutdown();
-}
+/* START -- Logger settings simple -- */
+//var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+//try
+//{
+//    logger.Debug("init main function");
+//}
+//catch (Exception ex)
+//{
+//    logger.Error(ex, "Error in init");
+//    throw;
+//}
+//finally
+//{
+//    LogManager.Shutdown();
+//}
 
-builder.Logging.ClearProviders();
-builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-builder.Host.UseNLog();
+
+//builder.Logging.ClearProviders();
+//builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+//builder.Host.UseNLog();
+
+/* END -- Logger settings simple -- */
+
+LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(),
+"/nlog.config"));
 
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
-
+builder.Services.ConfigureLoggingManager();
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();

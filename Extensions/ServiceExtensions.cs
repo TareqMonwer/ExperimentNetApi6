@@ -1,4 +1,7 @@
 ﻿
+using Contracts;
+using LoggerService;
+
 namespace ExperimentNetApi6.Extensions
 {
     public static class ServiceExtensions
@@ -17,6 +20,11 @@ namespace ExperimentNetApi6.Extensions
         public static void ConfigureIISIntegration(this IServiceCollection services)
         {
             services.Configure<IISOptions>(options => { });
+        }
+
+        public static void ConfigureLoggingManager(this IServiceCollection services)
+        {
+            services.AddSingleton<INLoggerManager, NLoggerManager>();
         }
 
     }

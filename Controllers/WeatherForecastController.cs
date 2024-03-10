@@ -1,3 +1,4 @@
+using Contracts;
 using ExperimentNetApi6.Data;
 using ExperimentNetApi6.Dtos;
 using ExperimentNetApi6.Services;
@@ -14,10 +15,10 @@ namespace ExperimentNetApi6.Controllers
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly INLoggerManager _logger;
         private readonly IWeatherRepository _weather_service;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherRepository weather_svc)
+        public WeatherForecastController(INLoggerManager logger, IWeatherRepository weather_svc)
         {
             _logger = logger;
             _weather_service = weather_svc;
@@ -26,10 +27,10 @@ namespace ExperimentNetApi6.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogInformation("---Logger: Loginfo");
-            _logger.LogDebug("----Logger: LogDebug");
-            _logger.LogWarning("---Logger: LogWarning");
-            _logger.LogError("---Error: LogError");
+            _logger.LogInfo("---LoggerService: Loginfo");
+            _logger.LogDebug("----LoggerService: LogDebug");
+            _logger.LogWarn("---LoggerService: LogWarning");
+            _logger.LogError("---LoggerService: LogError");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
