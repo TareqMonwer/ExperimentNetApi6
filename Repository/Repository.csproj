@@ -4,9 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	  <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LoggerService\LoggerService.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
   </ItemGroup>
 

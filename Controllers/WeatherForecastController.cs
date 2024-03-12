@@ -1,7 +1,7 @@
-using Contracts;
 using ExperimentNetApi6.Data;
 using ExperimentNetApi6.Dtos;
 using ExperimentNetApi6.Services;
+using Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExperimentNetApi6.Controllers
@@ -27,10 +27,10 @@ namespace ExperimentNetApi6.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogInfo("---LoggerService: Loginfo");
-            _logger.LogDebug("----LoggerService: LogDebug");
-            _logger.LogWarn("---LoggerService: LogWarning");
-            _logger.LogError("---LoggerService: LogError");
+            _logger.LogInfo("---Contracts: Loginfo");
+            _logger.LogDebug("----Contracts: LogDebug");
+            _logger.LogWarn("---Contracts: LogWarning");
+            _logger.LogError("---Contracts: LogError");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
