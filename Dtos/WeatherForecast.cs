@@ -1,4 +1,6 @@
-namespace ExperimentNetApi6
+using System.ComponentModel.DataAnnotations;
+
+namespace ExperimentNetApi6.Dtos
 {
     public class WeatherForecast
     {
@@ -8,6 +10,7 @@ namespace ExperimentNetApi6
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
+        [Required]
         public string? Summary { get; set; }
     }
 }

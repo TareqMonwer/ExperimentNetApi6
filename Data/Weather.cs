@@ -7,5 +7,6 @@
         public int TemperatureC { get; set; }
         public int TemperatureF { get; set; }
         public string Summary { get; set; }
+        public string SearchCount { get; set; }
     }
 }
