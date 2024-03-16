@@ -38,6 +38,7 @@ LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(),
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggingManager();
+builder.Services.ConfigureRepositoryManager();
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();

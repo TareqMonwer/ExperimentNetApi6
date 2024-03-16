@@ -1,6 +1,7 @@
 ﻿
 using Contracts;
 using LoggerService;
+using Repository;
 
 namespace ExperimentNetApi6.Extensions
 {
@@ -25,6 +26,11 @@ namespace ExperimentNetApi6.Extensions
         public static void ConfigureLoggingManager(this IServiceCollection services)
         {
             services.AddSingleton<INLoggerManager, NLoggerManager>();
+        }
+
+        public static void ConfigureRepositoryManager(this IServiceCollection services)
+        {
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
         }
 
     }
