@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using AutoMapper;
+using Contracts;
 using Service.Contracts;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,13 @@ namespace Service
     {
         private readonly IRepositoryManager _repository;
         private readonly INLoggerManager _loggerManager;
+        private readonly IMapper _mapper;
 
-        public EmployeeService(IRepositoryManager repository, INLoggerManager loggerManager)
+        public EmployeeService(IRepositoryManager repository, INLoggerManager loggerManager, IMapper mapper)
         {
             _repository = repository;
             _loggerManager = loggerManager;
+            _mapper = mapper;
         }
     }
 }

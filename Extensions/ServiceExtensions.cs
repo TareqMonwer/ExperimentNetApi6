@@ -1,6 +1,5 @@
 ﻿
 using Contracts;
-using ExperimentNetApi6.Data;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
 using Repository;
