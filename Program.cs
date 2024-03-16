@@ -39,6 +39,8 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggingManager();
 builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureServiceManager();
+builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
@@ -47,10 +49,10 @@ builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ExperimentNetApi6Context>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ExperminetNet6Connection"));
-});
+//builder.Services.AddDbContext<ExperimentNetApi6Context>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("ExperminetNet6Connection"));
+//});
 
 
 var app = builder.Build();
