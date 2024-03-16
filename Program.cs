@@ -1,36 +1,9 @@
-using ExperimentNetApi6.Data;
-using ExperimentNetApi6.Services;
-using Microsoft.EntityFrameworkCore;
 using ExperimentNetApi6.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using NLog;
-using NLog.Web;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
-/* START -- Logger settings simple -- */
-//var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-//try
-//{
-//    logger.Debug("init main function");
-//}
-//catch (Exception ex)
-//{
-//    logger.Error(ex, "Error in init");
-//    throw;
-//}
-//finally
-//{
-//    LogManager.Shutdown();
-//}
-
-
-//builder.Logging.ClearProviders();
-//builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-//builder.Host.UseNLog();
-
-/* END -- Logger settings simple -- */
 
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(),
 "/nlog.config"));
@@ -41,18 +14,12 @@ builder.Services.ConfigureLoggingManager();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
-builder.Services.AddControllers();
-
-builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(ExperimentNetApi6.Presentation.AssemblyReference).Assembly);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-//builder.Services.AddDbContext<ExperimentNetApi6Context>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("ExperminetNet6Connection"));
-//});
 
 
 var app = builder.Build();
@@ -91,17 +58,5 @@ app.Map("/usingMap", builder => {
         await context.Response.WriteAsync("UsingMap Page");
     });
 });
-
-//app.Use(async (context, next) =>
-//{
-//    await Console.Out.WriteLineAsync("Logic before calling next");
-//    await next.Invoke();
-//    await Console.Out.WriteLineAsync("1st Custom middleware, after next");
-//});
-//app.Run(async context =>
-//{
-//    await Console.Out.WriteLineAsync("2nd Custom middleware");
-//    await context.Response.WriteAsync("Hello from middleware component.");
-//});
 
 app.Run();
