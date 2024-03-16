@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{5F2B838B-90EC-4BEB-8823-96A009C5E169}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Contracts", "Service.Contracts\Service.Contracts.csproj", "{F87A830B-487F-4235-BBD0-34821F7734E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Contracts", "Service.Contracts\Service.Contracts.csproj", "{F87A830B-487F-4235-BBD0-34821F7734E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{42B94E2A-40E0-45A6-8135-D3BB9D36218C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{42B94E2A-40E0-45A6-8135-D3BB9D36218C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExperimentNetApi6.Presentation", "ExperimentNetApi6.Presentation\ExperimentNetApi6.Presentation.csproj", "{1705AD03-2240-47FA-AEBC-61A82BD9CCDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExperimentNetApi6.Presentation", "ExperimentNetApi6.Presentation\ExperimentNetApi6.Presentation.csproj", "{1705AD03-2240-47FA-AEBC-61A82BD9CCDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{B177C935-3576-4FF0-93C8-86E8B6A39B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{1705AD03-2240-47FA-AEBC-61A82BD9CCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1705AD03-2240-47FA-AEBC-61A82BD9CCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1705AD03-2240-47FA-AEBC-61A82BD9CCDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B177C935-3576-4FF0-93C8-86E8B6A39B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B177C935-3576-4FF0-93C8-86E8B6A39B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B177C935-3576-4FF0-93C8-86E8B6A39B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B177C935-3576-4FF0-93C8-86E8B6A39B6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
