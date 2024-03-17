@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
+using Shared.DataTransferObjects;
 
 namespace ExperimentNetApi6.Presentation.Controllers
 {
@@ -21,11 +22,23 @@ namespace ExperimentNetApi6.Presentation.Controllers
             return Ok(employees);
         }
 
-        [HttpGet("{employeeId:guid}")]
+        [HttpGet("{employeeId:guid}", Name = "GetEmployeeForCompany")]
         public IActionResult GetEmployeeForCompany(Guid companyId, Guid employeeId)
         {
             var employee = _service.EmployeeService.GetEmployee(employeeId, companyId, trackChanges: false);
             return Ok(employee);
+        }
+
+        [HttpPost]
+        public IActionResult CreateEmployeeForCompany(Guid companyId, [FromBody] EmployeeCreateDto companyCreateDto)
+        {
+            if (companyCreateDto == null)
+            {
+                return BadRequest("CompanyCreateDto cannot be null");
+            }
+
+            var employee = _service.EmployeeService.CreateEmployeeForCompany(companyId, companyCreateDto, trackChanges: false);
+            return CreatedAtRoute("GetEmployeeForCompany", new { companyId, employeeId = employee.Id }, employee);
         }
     }
 }

@@ -21,5 +21,11 @@ namespace Repository
                 e => e.CompanyId.Equals(companyId) && e.Id.Equals(employeeId), trackChanges);
             return query.SingleOrDefault();
         }
+
+        public void CreateEmployee(Guid companyId, Employee employee)
+        {
+            employee.CompanyId = companyId;
+            Create(employee);
+        }
     }
 }
