@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Contracts;
+using Entities;
 using Entities.Exceptions;
 using Service.Contracts;
 using Shared.DataTransferObjects;
@@ -44,6 +45,22 @@ namespace Service
             }
             var employeeDto = _mapper.Map<EmployeeDto>(employee);
             return employeeDto;
+        }
+
+        public EmployeeDto CreateEmployeeForCompany(Guid companyId, EmployeeCreateDto employee, bool trackChanges)
+        {
+            var company = _repository.Company.GetCompany(companyId, trackChanges);
+            if (company == null)
+            {
+                throw new CompanyNotFoundException(companyId);
+            }
+
+            var employeeEntity = _mapper.Map<Employee>(employee);
+            _repository.Employee.CreateEmployee(companyId, employeeEntity);
+            _repository.Save();
+
+            var employeeResponse = _mapper.Map<EmployeeDto>(employeeEntity);
+            return employeeResponse;
         }
     }
 }
