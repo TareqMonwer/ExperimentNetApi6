@@ -420,3 +420,54 @@
 2024-03-18 00:57:24.8085 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
 2024-03-18 00:57:24.8085 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
 2024-03-18 00:57:24.8310 Info Configuration initialized.
+2024-03-18 01:06:56.7355 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-18 01:06:56.7436 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-18 01:06:56.7853 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-18 01:06:56.7853 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-18 01:06:56.7983 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-18 01:06:56.8103 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-18 01:06:56.8234 Info Configuration initialized.
+2024-03-18 01:06:57.8132 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-18 01:06:57.8209 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-18 01:06:57.8803 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-18 01:06:57.8836 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-18 01:06:57.9018 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-18 01:06:57.9241 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-18 01:06:57.9441 Info Configuration initialized.
+2024-03-18 01:14:23.7979 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-18 01:14:23.8361 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-18 01:14:24.0506 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-18 01:14:24.0528 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-18 01:14:24.0721 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-18 01:14:24.1051 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-18 01:14:24.1540 Info Configuration initialized.
+2024-03-20 23:32:41.7844 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-20 23:32:42.0311 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-20 23:32:42.3152 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-20 23:32:42.3152 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-20 23:32:42.3362 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-20 23:32:42.3696 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-20 23:32:42.3924 Info Configuration initialized.
+2024-03-20 23:39:11.5954 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-20 23:39:11.6051 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-20 23:39:11.7029 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-20 23:39:11.7029 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-20 23:39:11.7220 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-20 23:39:11.7412 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-20 23:39:11.7622 Info Configuration initialized.
+2024-03-20 23:39:43.7472 Info AppDomain Shutting down. LogFactory closing...
+2024-03-20 23:39:43.7802 Info LogFactory has been closed.
+2024-03-20 23:39:53.1766 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-20 23:39:53.1766 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-20 23:39:53.2665 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-20 23:39:53.2699 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-20 23:39:53.2886 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-20 23:39:53.3110 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-20 23:39:53.3296 Info Configuration initialized.
+2024-03-21 00:02:52.3442 Info Loading assembly name: NLog.Web.AspNetCore
+2024-03-21 00:02:52.3511 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.8.1035. Product version: 5.3.8+0c5db2371c65c25905734b0335fd0c593ee61ad6. GlobalAssemblyCache: False
+2024-03-21 00:02:52.3931 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-03-21 00:02:52.3931 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-03-21 00:02:52.3931 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-21 00:02:52.4119 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Personal\Projects\c#\ExperimentNetApi6\nlog.config
+2024-03-21 00:02:52.4119 Info Configuration initialized.
