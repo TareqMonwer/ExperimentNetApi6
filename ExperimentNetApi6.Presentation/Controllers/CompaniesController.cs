@@ -54,5 +54,12 @@ namespace ExperimentNetApi6.Presentation.Controllers
 
             return CreatedAtRoute("CompanyCollection", new { result.ids }, result.companies);
         }
+
+        [HttpDelete("{companyId:guid}")]
+        public IActionResult DeleteCompany(Guid companyId)
+        {
+            _service.CompanyService.DeleteCompany(companyId, trackChanges: false);
+            return NoContent();
+        }
     }
 }

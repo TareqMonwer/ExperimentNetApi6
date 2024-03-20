@@ -40,5 +40,11 @@ namespace ExperimentNetApi6.Presentation.Controllers
             var employee = _service.EmployeeService.CreateEmployeeForCompany(companyId, companyCreateDto, trackChanges: false);
             return CreatedAtRoute("GetEmployeeForCompany", new { companyId, employeeId = employee.Id }, employee);
         }
+
+        [HttpDelete("{employeeId:guid}")]
+        public IActionResult DeleteEmployeeForCompany(Guid companyId, Guid employeeId) {
+            _service.EmployeeService.DeleteEmployeeForCompany(companyId, employeeId, trackChanges: false);
+            return NoContent();
+        }
     }
 }
