@@ -62,6 +62,24 @@ namespace Service
             var employeeResponse = _mapper.Map<EmployeeDto>(employeeEntity);
             return employeeResponse;
         }
+
+        public void DeleteEmployeeForCompany(Guid companyId, Guid employeeId, bool trackChanges)
+        {
+            var company = _repository.Company.GetCompany(companyId, trackChanges);
+            if (company == null)
+            {
+                throw new CompanyNotFoundException(companyId);
+            }
+
+            var employee = _repository.Employee.GetEmployee(companyId, employeeId, trackChanges);
+            if (employee == null)
+            {
+                throw new EmployeeNotFoundException(employeeId);
+            }
+
+            _repository.Employee.DeleteEmployee(employee);
+            _repository.Save();
+        }
     }
 }
  
